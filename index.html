@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Age check</title>
+    </head>
+
+    <body>
+        Birthdate should be before or on <a id="date">xxx</a>
+    <script>
+            var eighteenYearsAgo = new Date();
+            eighteenYearsAgo = eighteenYearsAgo.setFullYear(eighteenYearsAgo.getFullYear()-18);
+            var options = { year: 'numeric', month: 'short', day: 'numeric' };
+            console.log(eighteenYearsAgo);
+            el = document.getElementById('date');
+            el.text = new Date(eighteenYearsAgo).toLocaleDateString("en-UK", options);
+    </script>
+    </body>
+
+</html>
